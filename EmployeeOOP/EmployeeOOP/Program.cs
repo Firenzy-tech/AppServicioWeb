@@ -1,11 +1,28 @@
-﻿// See https://aka.ms/new-console-template for more information
-using EmployeeOOP.Classes;
+﻿using EmployeeOOP.Classes;
 
-Console.WriteLine("OPP APLICATION");
-Console.WriteLine("________________");
+try
+{
+    //Declaración de variables
+    int day, month, year;
 
-Date objectDate = new (4, 5, 2023);
+    Console.WriteLine("OOP APPLICATION");
+    Console.WriteLine("---------------");
 
-Console.WriteLine(objectDate.ToString());
+    Console.Write("Ingresar el día: ");
+    day = Convert.ToInt32(Console.ReadLine());
 
+    Console.Write("Ingresar el mes: ");
+    month = Convert.ToInt32(Console.ReadLine());
 
+    Console.Write("Ingresar el año: ");
+    year = Convert.ToInt32(Console.ReadLine());
+
+    //Inicialización de la clase Date
+    Date dateObject = new Date(day, month, year);
+    Console.WriteLine("\n");
+    Console.WriteLine(dateObject.ToString());
+}
+catch (Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}
